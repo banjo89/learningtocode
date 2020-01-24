@@ -1,0 +1,34 @@
+def wrap_up():
+    print(" __________________________________________________________")
+    print("|                                                          |")
+    print("| Name: " + name + "           Age: "+ age + "                           |")
+    print("| Phone: " + phone + "    Email: " + email+ "      |")
+    print("|                                                          |")
+    print(" ----------------------------------------------------------")
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+phone = input("Enter phone number: ")
+email = input("Email: ")
+wrap_up()
+while True:
+    correct = input("Is this information correct?")
+    if correct == "yes":
+        correct_yes = 1
+        print ("Great, a representative will be contacting you soon!")
+        g = input("Your profile is now complete, please close this window.")
+
+    elif correct == "no":
+        flaw = input("Where is the error?(name/age/phone/email) ")
+        corrected_flaw = input("What is your correct " + flaw + " then? ")
+        if flaw == "name":
+            name = corrected_flaw
+        elif flaw == "age":
+            age = corrected_flaw
+        elif flaw == "phone":
+            phone = corrected_flaw
+        elif flaw == "email":
+            email = corrected_flaw
+        wrap_up()
+
+    elif correct !="yes" or "no":
+        print("Please type 'yes' or 'no'")
